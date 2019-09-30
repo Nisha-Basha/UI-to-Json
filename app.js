@@ -6,8 +6,7 @@ $(document).ready(function(){
     $(".addRow").click(function(){
         previousRowId=newRowId-1;
         $('#tableRow'+newRowId).addClass("inputRow");
-        $('#tableRow'+newRowId).html($('#tableRow'+previousRowId).html()).find("td:first-child input").val(newRowId);
-        $('#tableRow'+newRowId).find("td:first-child span").html(newRowId);
+        $('#tableRow'+newRowId).html($('#tableRow'+previousRowId).html()).find("td:first-child").html(newRowId);
         $('.tableProduct').append('<tr id="tableRow'+(newRowId+1)+'"></tr>'); //creating Dummy Row
           newRowId++;
         // alert($('.tableProduct tbody tr').length);
